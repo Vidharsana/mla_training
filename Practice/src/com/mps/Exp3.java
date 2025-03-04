@@ -2,6 +2,7 @@ package com.mps;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map.Entry;
 import java.util.Objects;
 
@@ -78,5 +79,10 @@ public class Exp3 {
 			Entry<Customer,String> et = itr.next();
 			System.out.println(et.getKey()+" "+et.getValue());
 		}
+		//Map to List
+		List<Customer> cntData = data.keySet().stream().toList();
+		
+		
+		
 	}
 }
