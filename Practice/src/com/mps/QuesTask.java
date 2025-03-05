@@ -133,12 +133,12 @@ public class QuesTask {
 		System.out.println("Price : "+maxPrc.getPrice());
 	}
 	
-	//4 Average monthly spending in e-com
+	//4 Average spending in e-com
 	public static void getAveragePrice(List<Orders> orderList) {
 		Map<String,Double> avgData = orderList.stream().collect(Collectors.groupingBy(Orders :: getCategory,Collectors.averagingDouble(Orders :: getPrice)));
 		System.out.println(avgData);
 	}
-	//5 find min order price in the total orders
+	//5 find minimum order price in the total orders
 	public static void getMinOrderPrice(List<Orders> orderList) {
 		Optional<Orders> minPrice = orderList.stream().min(Comparator.comparing(Orders :: getPrice));
 		Orders minPrc = minPrice.get();
